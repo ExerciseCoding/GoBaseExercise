@@ -43,11 +43,11 @@ func TestArrayComparing(t *testing.T){
 	if a == b {
 		t.Log("equal")
 	}
-	c := [...]int{1,2,3}
-	d := [...]int{4,5,6}
-	if d > c {
-		t.Log("equal")
-	}
+	//c := [...]int{1,2,3}
+	//d := [...]int{4,5,6}
+	//if d > c {
+	//	t.Log("equal")
+	//}
 	//数组不能比大小
 }
 
