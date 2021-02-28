@@ -49,5 +49,12 @@ func TestArrayComparing(t *testing.T){
 	//	t.Log("equal")
 	//}
 	//数组不能比大小
+	for i,v := range a {
+		t.Log(i,v)
+	}
+	x := 123
+	y := x/10
+	t.Log(y)
 }
+
 
