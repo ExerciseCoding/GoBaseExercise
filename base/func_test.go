@@ -42,3 +42,15 @@ func Sum(ops ...int) int {
 func TestSum(t *testing.T){
 	t.Log("求和为",Sum(1,2,3))
 }
+
+//defer
+func clear(){
+	fmt.Print("clear")
+
+}
+
+func TestDefer(t *testing.T) {
+	defer clear()
+	fmt.Println("hello")
+	panic("err")
+}
