@@ -1,6 +1,9 @@
 package base
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 //字符串
 func TestString(t *testing.T){
@@ -24,8 +27,40 @@ func TestString(t *testing.T){
 }
 //字符串遍历
 func TestStringToRune(t *testing.T){
-	s := "中华人民共和国"
-	for _, c := range s{
-		t.Logf("%[1]c %[1]x",c)
+	//s := "中华人民共和国"
+	//for _, c := range s{
+	//	t.Logf("%[1]c %[1]x",c)
+	//}
+
+	//b := "abc"
+	//print (b[0])
+	//s1 := b[:3]
+	//s2 := b[1:2]
+	//fmt.Println(s1,s2)
+
+	//要修改字符串，可先将其转换成 []rune 或 []byte，完成后再转换为 string。⽆无论哪种转 换，都会重新分配内存，并复制字节数组。
+	//s := "abcd"
+	//bs := []byte(s)
+	//bs[0] = 'c'
+	//fmt.Println(string(bs),"bs")
+	//fmt.Println(s,"s")
+
+	//bu := []rune(s)
+	//bu[1] = 'x'
+	//fmt.Println(string(bu))
+	//fmt.Println(s)
+
+
+}
+
+func TestByteAndRune(t *testing.T) {
+	flag := "ni hao 中国"
+	for i := 0; i < len(flag); i++ {
+		fmt.Println(flag[i])
+	}
+	fmt.Println(flag[0:9])
+	//输出结果ni hao ��，乱码
+	for k,v := range flag {
+		fmt.Println(k,v)
 	}
 }
