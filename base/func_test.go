@@ -15,6 +15,7 @@ func timeSpend(inner func(op int) int) func (op int) int {
 	return func(n int) int {
 		start := time.Now()
 		ret := inner(n)
+
 		fmt.Println("time spend:",time.Since(start).Seconds())
 		return ret
 	}
