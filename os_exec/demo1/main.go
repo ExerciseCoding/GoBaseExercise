@@ -13,7 +13,7 @@ func main(){
 		err error
 	)
 	//生成cmd
-	cmd = exec.Command("/bin/bash", "-c", "ls -l | wc -l")
+	cmd = exec.Command("/bin/bash", "-c", "ls -l")
 
 	//执行命令，捕获子进程的输出
 
@@ -23,6 +23,6 @@ func main(){
 
 	//打印子进程输出
 
-	fmt.Println(output)
+	fmt.Println(string(output))
 
 }

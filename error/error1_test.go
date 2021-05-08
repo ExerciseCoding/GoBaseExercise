@@ -17,11 +17,14 @@ func echo(request string)(response string,err error){
 }
 
 func TestEcho(t *testing.T){
+	var(
+		resp string
+		err error
+	)
 	for _,req := range []string{"","hello"}{
 		fmt.Printf("request:%s \n",req)
 
-		resp,err := echo(req)
-		if err != nil {
+		if resp,err = echo(req); err != nil{
 			fmt.Printf("error: %s \n",err)
 			continue
 		}
