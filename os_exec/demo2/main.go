@@ -34,8 +34,8 @@ func main(){
 			output []byte
 			err error
 		)
-		cmd = exec.CommandContext(ctx,"/bin/bash", "-c", "ls -l")
-
+		cmd = exec.CommandContext(ctx,"/bin/bash", "-c", "ls -l|wc -l")
+		time.Sleep(2 * time.Second)
 		//实时监听context的chan是否关闭
 		//select {case <- ctx.Done():}
 		//kill pid,进程ID，杀死子进程
