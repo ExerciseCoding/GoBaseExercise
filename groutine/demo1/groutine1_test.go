@@ -34,11 +34,11 @@ func TestWaitSonGroutine(t *testing.T){
 //2.方式2： 通道的方式
 
 func TestWaitSonGroutine2(t *testing.T){
-	ch := make(chan int,10)
+	ch := make(chan struct{},10)
 	for i := 0; i < 10; i++{
 		go func(){
 			fmt.Println(i)
-			ch <- 1
+			ch <- struct{}{}
 		}()
 	}
 
