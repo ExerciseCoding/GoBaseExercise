@@ -19,7 +19,7 @@ func TestGroutineSort(t *testing.T){
 	}
 }
 
-func TestGroutineSort2(t *testing.T){
+func TestGroutineSequence(t *testing.T){
 	var count uint32
 	trigger := func(i uint32,fn func()){
 		for{
