@@ -11,10 +11,12 @@ func TestBinarySearch(t *testing.T) {
 	fmt.Println(result)
 }
 
-func BenchmarkBinarySearch(t *testing.B) {
+func BenchmarkBinarySearch(b *testing.B) {
 	var arr = []int{1,2,3,4,5,6}
-	result := BinarySearch(arr,0,len(arr)-1,4)
-	fmt.Println(result)
+	for i := 0; i < b.N; i++{
+		BinarySearch(arr,0,len(arr)-1,4)
+	}
+
 	//BenchmarkBinarySearch-8   	1000000000	         0.000011 ns/op
 	//BenchmarkBinarySearch-8:测试函数为BenchmarkBinarySearch  测试时最大P为8
 	//1000000000 : 被测函数实际运行次数
