@@ -1,5 +1,10 @@
 package esay
 
+import (
+	"fmt"
+	"testing"
+)
+
 /**
 类别: Leetcode
 题号: 70题
@@ -25,4 +30,9 @@ func climbStairs(n int)int{
 	}
 
 	return climbStairs(n-1) + climbStairs(n-2)
+}
+
+func TestClimbStairs(t *testing.T){
+	sumMethod := climbStairs(6)
+	fmt.Println(sumMethod)
 }
