@@ -27,4 +27,5 @@ func GetFibonacci(n int)([]int , error){
 		fiblist = append(fiblist,fiblist[i-2]+fiblist[i-1])
 	}
 	return fiblist, nil
+
 }
