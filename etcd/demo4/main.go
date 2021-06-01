@@ -33,6 +33,11 @@ func main(){
 	if getResp,err = kv.Get(context.TODO(),"/cron/jobs/",clientv3.WithPrefix()); err != nil{
 		fmt.Println(err)
 	}else{
-		fmt.Println(getResp.Kvs)
+		//fmt.Println(getResp.Kvs)
+		fmt.Print()
+	}
+
+	for kvs,value := range getResp.Kvs{
+		fmt.Println(kvs,string(value.Value))
 	}
 }
