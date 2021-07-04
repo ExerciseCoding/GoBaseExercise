@@ -81,4 +81,6 @@ func TestClimbStairs(t *testing.T){
 	sumMethodFor := climbStairsFor(7)
 	sumMethodNoRepeat := climbStairsNoRepeat(7)
 	fmt.Println(sumMethod,sumMethodFor,sumMethodNoRepeat)
+
 }
+
