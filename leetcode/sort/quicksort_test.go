@@ -30,3 +30,12 @@ func QuickSort(nums []int,start, end int){
 		}
 	}
 }
+
+
+
+func QuickSortBackend(nums []int,left,right int){
+	if left < right{
+		mid := nums[(left+right)/2]
+
+	}
+}
