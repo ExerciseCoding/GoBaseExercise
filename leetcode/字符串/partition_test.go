@@ -4,7 +4,9 @@ package 字符串
  */
 
 func partion(s string)[][]string{
-
+	result := [][]string{}
+	partionFind(s,[]string{},&result,0)
+	return result
 }
 
 
